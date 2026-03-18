@@ -114,8 +114,8 @@ html, body {
 }
 
 .main-product-image {
-  width: 72%;
-  max-width: 390px;
+  width: 80%;
+  max-width: 460px;
   border-radius: var(--radius);
   display: block;
   margin: 0 auto;
