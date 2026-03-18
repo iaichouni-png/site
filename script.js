@@ -61,6 +61,7 @@ const qtyPlusBtn = document.getElementById("qtyPlus");
 const qtyMinusBtn = document.getElementById("qtyMinus");
 const totalPriceEl = document.getElementById("totalPrice");
 const successBanner = document.getElementById("successBanner");
+const countdownTimerEl = document.getElementById("countdownTimer");
 const UNIT_PRICE = 129;
 
 function applyLanguage(lang) {
@@ -124,6 +125,31 @@ function rotateAnnouncement() {
   const t = content[state.lang];
   state.announceIndex = (state.announceIndex + 1) % t.announce.length;
   announceText.textContent = t.announce[state.announceIndex];
+}
+
+function startCountdown() {
+  if (!countdownTimerEl) return;
+  const randomStartHour = Math.floor(Math.random() * 24);
+  const endAt = Date.now() + (3 * 24 * 60 * 60 * 1000) + (randomStartHour * 60 * 60 * 1000);
+
+  const updateCountdown = () => {
+    const remaining = endAt - Date.now();
+    if (remaining <= 0) {
+      countdownTimerEl.textContent = "00:00:00:00";
+      return;
+    }
+
+    const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+    const pad = (n) => String(n).padStart(2, "0");
+    countdownTimerEl.textContent = `${pad(days)}:${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+  };
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 }
 
 langToggle.addEventListener("click", () => {
@@ -239,3 +265,4 @@ orderForm.addEventListener("submit", async (e) => {
 setInterval(rotateAnnouncement, 5000);
 applyLanguage("ar");
 updatePriceUI();
+startCountdown();
