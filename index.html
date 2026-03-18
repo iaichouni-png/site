@@ -33,15 +33,15 @@
   <main class="page">
     <section class="promo-strip" aria-label="Promotion">
       <p>
-        🔥 عرض خاص لمدة 3 أيام:
-        <span class="old-price">200dh</span>
+        <span id="promoLead">🔥 عرض خاص لمدة 4 أيام:</span>
+        <span id="promoOldPriceTop" class="old-price">200dh</span>
         <span class="arrow">←</span>
-        <strong class="new-price">129dh</strong>
-        <span class="promo-note">ينتهي العرض خلال 3 أيام</span>
+        <strong id="promoNewPriceTop" class="new-price">129dh</strong>
+        <span id="promoNote" class="promo-note">ينتهي العرض خلال 4 أيام</span>
       </p>
     </section>
     <section class="countdown-wrap" aria-label="Countdown offer">
-      <p class="countdown-title">⏳ الوقت المتبقي على نهاية العرض:</p>
+      <p id="countdownTitle" class="countdown-title">⏳ الوقت المتبقي على نهاية العرض:</p>
       <p id="countdownTimer" class="countdown-timer">04:00:00:00</p>
     </section>
     <section class="product-section">
@@ -58,7 +58,7 @@
         <div class="info-col">
           <h1 id="title">الحقيبة الذكية للحماية من السرقة</h1>
           <div class="price-wrap">
-            <span class="old-price inline-old">200 درهم</span>
+            <span id="promoOldPriceInline" class="old-price inline-old">200 درهم</span>
             <span id="price" class="price">129 درهم</span>
             <span id="badge" class="badge">عرض خاص</span>
           </div>
@@ -79,7 +79,7 @@
             </label>
 
             <div class="quantity-wrap">
-              <span class="quantity-label">الكمية</span>
+              <span id="quantityLabel" class="quantity-label">الكمية</span>
               <div class="quantity-controls">
                 <button id="qtyPlus" class="qty-btn" type="button" aria-label="زيادة الكمية">+</button>
                 <input id="quantity" class="qty-input" name="quantity" type="number" min="1" value="1" inputmode="numeric">
@@ -87,7 +87,7 @@
               </div>
             </div>
 
-            <p class="total-price-line">السعر الإجمالي: <strong id="totalPrice">129 درهم</strong></p>
+            <p class="total-price-line"><span id="totalPriceLabel">السعر الإجمالي:</span> <strong id="totalPrice">129 درهم</strong></p>
 
             <button id="buyBtn" class="buy-btn" type="submit">اشتري الآن - 129 درهم</button>
             <a id="waBtn" class="wa-btn" href="#" target="_blank" rel="noopener">
@@ -97,7 +97,7 @@
                   <path fill="currentColor" d="M16.03 3.2c-7.09 0-12.84 5.75-12.84 12.84 0 2.27.6 4.49 1.73 6.44L3 29l6.71-1.76a12.77 12.77 0 0 0 6.32 1.72h.01c7.09 0 12.84-5.75 12.84-12.84S23.12 3.2 16.03 3.2zm0 23.53h-.01a10.67 10.67 0 0 1-5.44-1.49l-.39-.23-3.98 1.04 1.06-3.88-.25-.4a10.66 10.66 0 1 1 9.01 4.96z"/>
                 </svg>
               </span>
-              <span>تواصل معنا عبر الواتساب</span>
+              <span id="waBtnText">تواصل معنا عبر الواتساب</span>
             </a>
             <p id="formMessage" class="form-message" aria-live="polite"></p>
             <div id="successBanner" class="success-banner" hidden></div>
@@ -105,22 +105,22 @@
 
           <div class="description" id="description">
             <p><img src="https://cdn.youcan.shop/stores/86dabb8ffe6a86457ab1f28cdccaa912/others/hqzkMr8isOljx8PTSU8lGzyN8fomHkwGFMWvnA83.gif" loading="lazy" alt=""></p>
-            <h3>حقيبة ذكية مضادة للسرقة بتصميم عصري</h3>
-            <p>الحل المثالي للتنقل اليومي وحماية أغراضك الشخصية بأمان وأناقة.</p>
+            <h3 id="descMainTitle">حقيبة ذكية مضادة للسرقة بتصميم عصري</h3>
+            <p id="descMainText">الحل المثالي للتنقل اليومي وحماية أغراضك الشخصية بأمان وأناقة.</p>
 
             <div class="desc-card">
-              <h4>المميزات الرئيسية</h4>
+              <h4 id="featuresTitle">المميزات الرئيسية</h4>
               <ul>
-                <li>منفذ USB عملي للشحن أثناء التنقل.</li>
-                <li>قماش خارجي مقاوم للماء لحماية أفضل.</li>
-                <li>قفل جانبي وسحابات معدنية مضادة للسرقة.</li>
-                <li>مساحة داخلية واسعة وجيوب متعددة للتنظيم.</li>
+                <li id="feature1">منفذ USB عملي للشحن أثناء التنقل.</li>
+                <li id="feature2">قماش خارجي مقاوم للماء لحماية أفضل.</li>
+                <li id="feature3">قفل جانبي وسحابات معدنية مضادة للسرقة.</li>
+                <li id="feature4">مساحة داخلية واسعة وجيوب متعددة للتنظيم.</li>
               </ul>
             </div>
 
             <div class="desc-card">
-              <h4>أبعاد المنتج</h4>
-              <p><strong>32 سم × 21 سم × 9 سم</strong></p>
+              <h4 id="dimensionsTitle">أبعاد المنتج</h4>
+              <p><strong id="dimensionsValue">32 سم × 21 سم × 9 سم</strong></p>
             </div>
 
             <p><img src="https://cdn.youcan.shop/stores/86dabb8ffe6a86457ab1f28cdccaa912/others/yK7Tc0b4Idh3o5nIrTK2Agtt7THpiby1aNtEcwcC.jpeg" loading="lazy" alt=""></p>
@@ -134,13 +134,13 @@
             <p><img src="https://cdn.youcan.shop/stores/86dabb8ffe6a86457ab1f28cdccaa912/others/5rXY5WuAHaRyEhJ6PGszcOXf7x3USl1coLF4JWRH.png" loading="lazy" alt=""></p>
 
             <div class="desc-card">
-              <h4>طريقة الاستلام</h4>
-              <p>بعد تأكيد طلبك، سيتواصل معك أحد أفراد فريقنا لتأكيد البيانات، ثم يتم شحن المنتج إليك مع الدفع عند الاستلام.</p>
+              <h4 id="deliveryTitle">طريقة الاستلام</h4>
+              <p id="deliveryText">بعد تأكيد طلبك، سيتواصل معك أحد أفراد فريقنا لتأكيد البيانات، ثم يتم شحن المنتج إليك مع الدفع عند الاستلام.</p>
             </div>
 
             <div class="desc-card">
-              <h4>ضماناتنا</h4>
-              <p>يمكنك معاينة المنتج عند الاستلام قبل الدفع. إذا لم يكن مطابقًا لتوقعاتك، يمكنك إلغاء الطلب بكل بساطة.</p>
+              <h4 id="guaranteeTitle">ضماناتنا</h4>
+              <p id="guaranteeText">يمكنك معاينة المنتج عند الاستلام قبل الدفع. إذا لم يكن مطابقًا لتوقعاتك، يمكنك إلغاء الطلب بكل بساطة.</p>
             </div>
 
         </div>
