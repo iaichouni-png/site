@@ -11,7 +11,7 @@
   <meta property="og:type" content="product" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="gradient">
@@ -40,17 +40,13 @@
         <span id="promoNote" class="promo-note">ينتهي العرض خلال 4 أيام</span>
       </p>
     </section>
-    <section class="shipping-banner" aria-label="Livraison gratuite">
-      <p id="shippingBannerText">🚚 Livraison gratuite partout au Maroc 🚚</p>
-      <div class="shipping-logos" aria-hidden="true">
-        <span>🚛</span>
-        <span>📦</span>
-        <span>🚚</span>
-      </div>
-    </section>
     <section class="countdown-wrap" aria-label="Countdown offer">
       <p id="countdownTitle" class="countdown-title">⏳ الوقت المتبقي على نهاية العرض:</p>
       <p id="countdownTimer" class="countdown-timer">04:00:00:00</p>
+    </section>
+
+    <section id="specialOfferBanner" class="special-offer-banner" aria-label="عرض خاص للكمية 2">
+      <p id="specialOfferText">خُوذ جوج بـ 259 درهم فقط، العرض محدود 🔥</p>
     </section>
     <section class="product-section">
       <div class="product-grid">
@@ -64,7 +60,7 @@
         </div>
 
         <div class="info-col">
-          <h1 id="title">الحقيبة الذكية للحماية من السرقة</h1>
+          <h2 id="title">الحقيبة الذكية للحماية من السرقة</h2>
           <div class="price-wrap">
             <span id="promoOldPriceInline" class="old-price inline-old">200 درهم</span>
             <span id="price" class="price">149 درهم</span>
@@ -108,6 +104,10 @@
               <span id="waBtnText">تواصل معنا عبر الواتساب</span>
             </a>
             <p id="formMessage" class="form-message" aria-live="polite"></p>
+            <div id="loadingState" class="loading-state" hidden>
+              <div class="loader" aria-hidden="true"></div>
+              <p id="loadingText">طلبكم قيد المعالجة، المرجو الانتظار قليلاً...</p>
+            </div>
             <div id="successBanner" class="success-banner" hidden></div>
           </form>
 
